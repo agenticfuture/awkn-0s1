@@ -6,12 +6,10 @@ import {
 
 export default function RootPage() {
   return (
-    <div className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden bg-background p-4 md:p-8">
-      {/* Background Decorative Elements - Static for SSR */}
-      <div className="-translate-x-1/2 -translate-y-1/2 absolute top-0 left-0 h-[500px] w-[500px] rounded-full bg-primary/10 blur-[120px]" />
-      <div className="absolute right-0 bottom-0 h-[500px] w-[500px] translate-x-1/2 translate-y-1/2 rounded-full bg-primary/5 blur-[120px]" />
-
-      <div className="relative z-10 mx-auto max-w-6xl text-center">
+    <div className="relative min-h-dvh overflow-hidden bg-[#f7f1e8]">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(170,125,70,0.12),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(56,37,20,0.08),transparent_35%)]" />
+      <div className="absolute inset-x-0 top-0 h-[28rem] bg-[linear-gradient(180deg,rgba(255,255,255,0.65),transparent)]" />
+      <div className="relative z-10">
         <LandingHeader />
         <LandingDashboard />
         <LandingFooter />

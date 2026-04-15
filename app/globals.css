@@ -89,8 +89,9 @@
 
 /* define theme */
 @theme {
-  --font-sans: var(--font-geist);
+  --font-sans: var(--font-manrope);
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-cormorant);
 
   --breakpoint-toast-mobile: 600px;
 
@@ -201,6 +202,7 @@
     @apply bg-background text-foreground;
     overflow-x: hidden;
     position: relative;
+    font-feature-settings: "liga" 1, "kern" 1;
   }
 
   html {

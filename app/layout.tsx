@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Cormorant_Garamond,
+  Geist,
+  Geist_Mono,
+  Manrope,
+} from "next/font/google";
 import { Toaster } from "sonner";
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -12,8 +17,9 @@ const botBaseUrl =
 
 export const metadata: Metadata = {
   metadataBase: botBaseUrl ? new URL(botBaseUrl) : undefined,
-  title: "ServiceGen Bot",
-  description: "ServiceGen tenant-scoped chatbot.",
+  title: "Awekening Network",
+  description:
+    "Awekening Network is a warm, editorial-style ministry platform for retreats, teaching, care, and conversation.",
 };
 
 export const viewport = {
@@ -30,6 +36,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-geist-mono",
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-manrope",
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-cormorant",
+  weight: ["400", "500", "600", "700"],
 });
 
 const LIGHT_THEME_COLOR = "hsl(0 0% 100%)";
@@ -59,7 +78,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      className={`${geist.variable} ${geistMono.variable}`}
+      className={`${geist.variable} ${geistMono.variable} ${manrope.variable} ${cormorant.variable}`}
       // `next-themes` injects an extra classname to the body element to avoid
       // visual flicker before hydration. Hence the `suppressHydrationWarning`
       // prop is necessary to avoid the React hydration mismatch warning.
